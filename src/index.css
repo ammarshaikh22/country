@@ -1,13 +1,188 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.boxes {
+  position: relative;
+  margin-top: 50px;
+}
+.container {
+  max-width: 88%;
+  margin: 0 auto;
+}
+.boxes .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.box {
+  border-radius: 10px;
+  max-width: 33.3%;
+  width: 200px;
+  margin: 10px 0;
+  height: 220px;
+  text-align: center;
+  box-shadow: 1px -2px 17px -1px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 1px -2px 17px -1px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 1px -2px 17px -1px rgba(0, 0, 0, 0.62);
+  border: none;
+  background-color: blanchedalmond;
+  transition: transform 0.5s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+.box img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 200px;
+  height: 130px;
+}
+.box h1 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.box h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.box p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  background-color: rgb(0, 0, 91);
+  color: white;
+  font-size: 14px;
+}
+
+.header {
+  position: relative;
+  padding: 20px 0;
+  background-color: blanchedalmond;
+}
+.header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header h1 {
+  text-align: start;
+  font-size: 40px;
+  color: rgb(0, 0, 91);
+}
+.srch {
+  position: relative;
+}
+input {
+  padding: 15px 30px;
+  border: none;
+  background-color: rgb(0, 0, 91);
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: none;
+}
+::placeholder {
+  color: white;
+}
+.btn {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.active {
+  display: block !important;
+}
+
+.header span {
+  cursor: pointer;
+  color: rgb(0, 0, 91);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dark {
+  background-color: rgba(0, 0, 0, 0.847);
+  color: rgb(255, 255, 255);
+}
+.darkBox {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.main {
+  position: relative;
+  padding-top: 50px;
+  height: 85vh;
+}
+.main .container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.main .row {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding: 20px;
+}
+.main .txt {
+  width: 30%;
+}
+.main img {
+  width: 450px;
+  height: 250px;
+}
+.main p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.main h1 {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.main h4 {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+.eff {
+  padding-top: 50px;
+}
+.effectBox {
+  background-color: rgb(213, 213, 213);
+}
+
+.imgEff {
+  width: 450px;
+  height: 250px;
+  background-color: rgb(213, 213, 213);
+}
+.txtEff {
+  width: 20%;
+  height: 250px;
+  background-color: rgb(213, 213, 213);
 }
