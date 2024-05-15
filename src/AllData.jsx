@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box } from "./Box";
 import { AllCountryEff } from "./AllCountryEff";
-const AllData = ({ filter }) => {
+const AllData = ({ filter, filterRegion }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -9,15 +9,18 @@ const AllData = ({ filter }) => {
       let json = await res.json();
       setData(json);
     };
-    getData();
+    getData()
   }, []);
+
   const filteredData = data.filter((item) =>
     item.name.common.toLowerCase().includes(filter.toLowerCase())
-  );
+  ).filter((item) => item.region.toLowerCase().includes(filterRegion.toLowerCase()));
+
   if (filteredData.length === 0) {
     return <AllCountryEff />;
   }
-  return filteredData.map((curr, index) => {
+
+  return  filteredData.map((curr, index) => { 
     return (
       <Box
         key={index}

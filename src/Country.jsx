@@ -18,18 +18,22 @@ export const Country = () => {
           `https://restcountries.com/v3.1/name/${CountryName}`
         );
         let json = await res.json();
-        setData({
-          name: json[0].name.common,
-          src: json[0].flags.png,
-          capital: json[0].capital[0],
-          population: json[0].population,
-          region: json[0].region,
-          subregion: json[0].subregion,
-          tld: json[0].tld[0],
-          currencies: json[0].currencies,
-          languages: json[0].languages,
-          borders: json[0].borders,
-        });
+        if (json.length > 0) {
+          setData({
+            name: json[0].name?.common || "Not Found",
+            src: json[0].flags?.png || "Not Found",
+            capital: json[0].capital?.[0] || "Not Found",
+            population: json[0].population || "Not Found",
+            region: json[0].region || "Not Found",
+            subregion: json[0].subregion || 'Not Found',
+            tld: json[0].tld?.[0] || "Not Found",
+            currencies: json[0].currencies || ["Not Found"],
+            languages: json[0].languages || ["Not Found"],
+            borders: json[0].borders?.map((border) => ` ${border}`) || ["Not Found"],
+          });
+        } else {
+          setLoading(false);
+        }
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -52,7 +56,7 @@ export const Country = () => {
             </div>
             <div className="row">
               <div className="img">
-                <img src={data.src} alt="flag" />
+                {data.src && <img src={data.src} alt="flag" />}
               </div>
               <div className="txt">
                 <h1>{data.name}</h1>
@@ -76,6 +80,10 @@ export const Country = () => {
                 <p>
                   <span>Top Level Domain: </span>
                   <span>{data.tld}</span>
+                </p>
+                <p>
+                  <span>Border Countries: </span>
+                  <span>{data.borders}</span>
                 </p>
               </div>
             </div>

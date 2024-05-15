@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export const Box = ({ name, src, capital }) => {    
+export const Box = ({ name, src, capital, }) => {    
     return (
         <div className="box">
             <Link to={`/country/${name}`} >
