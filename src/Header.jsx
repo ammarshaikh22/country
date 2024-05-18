@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 export const Header = ({ setFilter, setFilterRegion }) => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(JSON.parse(localStorage.getItem("setDarkMode")));
   if (dark) {
     document.body.classList.add("dark");
-    document.querySelectorAll(".box").forEach((e) => {
-      e.classList.add("darkBox");
-    })
   } else {
     document.body.classList.remove("dark");
-    document.querySelectorAll(".box").forEach((e) => {
-      e.classList.remove("darkBox");
-    });
   }
   return (
     <header>
@@ -19,7 +13,10 @@ export const Header = ({ setFilter, setFilterRegion }) => {
           <div className="row">
             <h1>Where are you in world</h1>
             <div>
-              <span onClick={() => setDark(!dark)}>
+              <span onClick={() => {
+                setDark(!dark)
+                localStorage.setItem('setDarkMode', !dark)
+              }}>
                 {dark ? "☀️ Light Mode" : "🌙 Dark Mode"}
               </span>
             </div>

@@ -80,6 +80,7 @@ button {
 .header {
   position: relative;
   background-color: blanchedalmond;
+  padding: 10px 0;
 }
 .header .row {
   display: flex;
@@ -133,11 +134,10 @@ input {
 }
 .dark {
   background-color: hsl(207, 26%, 17%);
-  color: rgb(255, 255, 255);
-}
-.darkBox {
-  background-color:  hsl(209, 23%, 22%);
-  color: rgb(255, 255, 255);
+  color: white;
+  .box{
+    background-color: hsl(209, 23%, 22%);
+  }
 }
 .dark-Header{
   background-color:  hsl(209, 23%, 22%);
