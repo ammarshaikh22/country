@@ -147,8 +147,13 @@ input {
 .dark {
   background-color: hsl(207, 26%, 17%);
   color: white;
-
   .box {
+    background-color: hsl(209, 23%, 22%);
+  }
+  .img-Eff{
+    background-color: hsl(209, 23%, 22%);
+  }
+  .txt-Eff{
     background-color: hsl(209, 23%, 22%);
   }
 }
