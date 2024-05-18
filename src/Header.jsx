@@ -7,8 +7,8 @@ export const Header = ({ setFilter, setFilterRegion }) => {
     document.body.classList.remove("dark");
   }
   return (
-    <header>
-      <section className={dark ? "dark-Header header" : "header"}>
+    <header className={dark ? "dark-Header header" : "header"}>
+      <section>
         <div className="container">
           <div className="row">
             <h1>Where are you in world</h1>

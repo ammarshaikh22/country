@@ -175,17 +175,15 @@ input {
 
 .main .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 140px;
   margin: 40px 0;
 }
-
-.main .txt {
-  width: 35%;
+.main .img{
+  width: 45%;
 }
-
 .main img {
-  width: 450px;
-  height: 250px;
+ width: 100%;
 }
 
 .main p {
@@ -203,9 +201,9 @@ input {
   font-size: 24px;
 }
 
-.eff {
+.main-eff {
   position: relative;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .eff .container-Eff {
@@ -221,14 +219,14 @@ input {
 }
 
 .img-Eff {
-  width: 450px;
+  width: 35%;
   height: 250px;
   background-color: rgb(213, 213, 213);
 }
 
 .txt-Eff {
-  width: 30%;
-  height: 250px;
+  width: 20%;
+  height: 300px;
   background-color: rgb(213, 213, 213);
 }
 
@@ -269,8 +267,44 @@ option {
 }
 
 @media only screen and (max-width: 600px) {
+  .header h1{
+    font-size: 22px;
+  }
+  .header span{
+    font-size: 12px;
+  }
   .srch .row {
     flex-direction: column;
     gap: 20px;
   }
+  .main .row{
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+  }
+  .main .img{
+    width: 100%;
+  }
+  .main-eff {
+    margin-left: 50px;
+    margin-top: 100px;
+  }
+  .row-Eff {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+  }
+  
+.img-Eff {
+  width: 85%;
+  height: 150px;
+  background-color: rgb(213, 213, 213);
+}
+
+.txt-Eff {
+  width: 45%;
+  height: 250px;
+  background-color: rgb(213, 213, 213);
+}
+  
 }

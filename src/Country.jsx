@@ -47,7 +47,7 @@ export const Country = () => {
     <>
       <Header />
       {loading ? (
-        <OneCountryEff />
+        <OneCountryEff key={CountryName}  />
       ) : (
         <section key={CountryName} className="main">
           <div className="container">
