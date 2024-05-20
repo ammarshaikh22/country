@@ -8,8 +8,8 @@ const App = () => {
   return (
     <>
       <Header setFilter={setFilter} setFilterRegion={setFilterRegion} />
-      <SrchHeader setFilter={setFilter} setFilterRegion={setFilterRegion}/>
-      <Home filter={filter} filterRegion={filterRegion}/>
+      <SrchHeader setFilter={setFilter} setFilterRegion={setFilterRegion} />
+      <Home filter={filter} filterRegion={filterRegion} />
     </>
   );
 };

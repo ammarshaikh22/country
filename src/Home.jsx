@@ -6,7 +6,7 @@ export const Home = ({ filter, filterRegion }) => {
     <section className="boxes">
       <div className="container">
         <div className="row">
-          <AllData filter={filter} filterRegion={filterRegion}/>
+          <AllData filter={filter} filterRegion={filterRegion} />
         </div>
       </div>
     </section>

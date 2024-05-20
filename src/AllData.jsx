@@ -20,7 +20,7 @@ const AllData = ({ filter, filterRegion }) => {
     return <AllCountryEff />;
   }
 
-  return  filteredData.map((curr, index) => { 
+  return filteredData.map((curr, index) => {
     return (
       <Box
         key={index}
